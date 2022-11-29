@@ -1,0 +1,48 @@
+<?php include('../../admin/config/config.php') ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a4088ee5a6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Foodie - Homepage</title>
+</head>
+<body>
+    <!-- Header - Member -->
+    <div class="h-16">
+        <div class="h-full float-left mx-5">
+            <a href="<?php echo "../pages/homepage-member.php"; ?>" title="Logo">
+                <img
+                src="../image/Foodie-logo.png" 
+                alt="Restaurant Logo"
+                class="w-auto h-full"
+                />
+                <!-- Note: Đường dẫn ảnh -->
+            </a>
+        </div>
+        <div class="bg-black h-full">
+            <ul class="text-left h-full inline-block">
+                <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
+                    <a href="<?php echo "../pages/homepage-member.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Home</a>
+                </li>
+                <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
+                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Products</a>
+                </li>
+            </ul>
+            <ul class="text-right h-full float-right">
+                <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
+                    <a href="../cart/cart.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">My cart</a>
+                </li>
+                <li class="inline-block font-bold bg-black text-white w-28 py-2 my-3 text-center">
+                    <a href="#" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">My account</a>
+                </li>
+                <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
+                    <a href="../pages/homepage-guest.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
