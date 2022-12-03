@@ -16,13 +16,14 @@
         $count = mysqli_num_rows($res);
         if($count==1)
         {
-            //User available and log in success
-            //Direct to homepage-member
-            if($mysqli = "SELECT * FROM user WHERE user_type='admin'") //admin
+            //User available, check type
+            $check_usertype = mysqli_query($conn, "SELECT * FROM user WHERE email='$email' AND password='$password' AND user_type='admin'");
+            $check_usertype = mysqli_num_rows($check_usertype);
+            if($check_usertype)
             {
                 header("Location: http://localhost/foodie_final/admin/components/manageProducts.php");
             }
-            else //user
+            else
             {
                 header("Location: http://localhost/foodie_final/user/pages/homepage-member.php");
             }
