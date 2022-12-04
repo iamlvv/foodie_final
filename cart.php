@@ -1,6 +1,6 @@
 <?php
 //require_once '../../admin/config/config.php';
-include('../navbar/header-member.php');
+include('./header-member.php');
 function Itemcart($productId, $productName, $productPrice, $productQuantity, $productImg)
 {
     $element = "
@@ -157,7 +157,7 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
             </div>
         </div>
     </div>
-    <?php include('../navbar/footer.php') ?>
+    <?php include('./footer.php') ?>
 </body>
 
 </html>

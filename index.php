@@ -1,13 +1,14 @@
-<?php include('../navbar/header-member.php')?>
+<?php include('./header-guest.php')?>
 
 <!-- Asian groceries -->
 <div 
-    class='h-auto lg:pb-44 md:pb-56 w-full bg-no-repeat bg-cover bg-center bg-fixed w-full' 
-    style="background-image: url('../image/homepage-background.png');"
+    class='h-auto lg:pb-44 md:pb-56 bg-no-repeat bg-cover bg-center bg-fixed w-full' 
+    style="background-image: url('./user/image/homepage-background.png');"
 >
     <h1 class='uppercase text-center md:text-3xl lg:text-5xl pt-52 font-bold font-serif'>asian groceries</h1>
     <div class='flex justify-center my-10 gap-20 text-center'>
-        <button class='rounded-3xl pt-2 pb-3 font-bold px-6 lg:text-2xl md:text-xl lg:w-56 md:w-52 bg-black text-white hover:shadow-md transition ease-in hover:text-black hover:bg-white'><a href="../products/allProducts.php">Let's shopping</a></button>
+        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="../login/signup.php">Sign up</a></button>
+        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="../login/login.php">Login</a></button>
     </div>
 </div>
 <!-- Suggestion -->
@@ -28,28 +29,28 @@
         </div>
 
         <div class='mt-10 lg:text-right md:text-center'>
-            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold lg:text-2xl md:text-xl hover:drop-shadow-md transition ease-in hover:text-black hover:bg-white'><a href="#" class="">Start Shopping</a></button>
+            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold text-2xl hover:drop-shadow-md transition ease-in hover:bg-white hover:text-black'><a href="#" class="">Start Shopping</a></button>
         </div>
     </div>
 
     <div class='grid grid-cols-3 mt-20 lg:gap-5 md:gap-6 h-96'>
         <div>
-            <img src="../image/hp-item1.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item1.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
         <div>
-            <img src="../image/hp-item2.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item2.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
         <div>
-            <img src="../image/hp-item3.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item3.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
         <div>
-            <img src="../image/hp-item4.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item4.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
         <div>
-            <img src="../image/hp-item5.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item5.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
         <div>
-            <img src="../image/hp-item6.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
+            <img src="./user/image/hp-item6.png" alt='' class='md:w-36 h-auto md:mx-auto'/>
         </div>
     </div>
 </div>
@@ -60,12 +61,12 @@
     <div class='flex flex-col gap-5'>
         <div class='flex flex-1 bg-white ml-10 mr-10 rounded-2xl p-5'>
             <div>
-                <img src="../image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
+                <img src="./user/image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
             </div>
             <div class='ml-10 lg:mt-5'>
                 <div class='flex flex-1 gap-3'>
                     <div>
-                        <img src= "../image/hp-item2.png" alt='' class="w-10 h-auto"/>
+                        <img src= "./user/image/hp-item2.png" alt='' class="w-10 h-auto"/>
                     </div>
                     <div class='text-gray-500'>
                         <p>chibaby123</p>
@@ -79,12 +80,12 @@
         </div>
         <div class='flex flex-1 bg-white ml-10 mr-10 rounded-2xl p-5'>
             <div>
-                <img src="../image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
+                <img src="./user/image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
             </div>
             <div class='ml-10 lg:mt-5'>
                 <div class='flex flex-1 gap-3'>
                     <div>
-                        <img src= "../image/hp-item2.png" alt='' class="w-10 h-auto"/>
+                        <img src= "./user/image/hp-item2.png" alt='' class="w-10 h-auto"/>
                     </div>
                     <div class='text-gray-500'>
                         <p>chibaby123</p>
@@ -98,12 +99,12 @@
         </div>
         <div class='flex flex-1 bg-white ml-10 mr-10 rounded-2xl p-5'>
             <div>
-                <img src="../image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
+                <img src="./user/image/hp-item1.png" alt='' class="h-auto w-full my-2"/>
             </div>
             <div class='ml-10 lg:mt-5'>
                 <div class='flex flex-1 gap-3'>
                     <div>
-                        <img src= "../image/hp-item2.png" alt='' class="w-10 h-auto"/>
+                        <img src= "./user/image/hp-item2.png" alt='' class="w-10 h-auto"/>
                     </div>
                     <div class='text-gray-500'>
                         <p>chibaby123</p>
@@ -159,4 +160,4 @@
     </details>
 </div>
 
-<?php include('../navbar/footer.php')?>
+<?php include('./footer.php')?>

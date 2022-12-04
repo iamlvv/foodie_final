@@ -1,10 +1,11 @@
 <?php
-    include('../navbar/header-guest.php');
+    include ('./header-guest.php');
     //Check whether the submit button is clicked or not
     if(isset($_POST['submit']))
     {
         //Process for Login
         //1. Get the data from Login form
+        $mysqli = mysqli_connect('localhost', 'root', '', 'foodie_store');
         $email = $_POST['email'];
         $password = $_POST['password'];
         //2. SQL to check whether the user with email and password exit or not
@@ -33,7 +34,7 @@
                
                 //print_r($_SESSION);
                 //User available and login success
-                header("Location: http://localhost/foodie_final/user/pages/homepage-member.php");
+                header("Location: http://localhost/foodie_final/homepage-member.php");
             }
         }
         else
@@ -109,7 +110,7 @@
         <!-- Login form ends -->
     </body>
     <?php
-        include('../navbar/footer.php');    
+        include('./footer.php');    
     ?>
 </html>
 

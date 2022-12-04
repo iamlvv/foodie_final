@@ -1,7 +1,7 @@
 <div class='grid grid-cols-3 p-2' style="background-color: black; color: white">
 
 <div>
-    <img src="../image/Foodie-logo.png" alt="logo" class="h-44 p-3 mx-3"/>
+    <img src="./user/image/Foodie-logo.png" alt="logo" class="h-44 p-3 mx-3"/>
 </div>
 
 <div class='flex flex-col my-auto'>

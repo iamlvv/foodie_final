@@ -1,4 +1,6 @@
-<?php include('../../admin/config/config.php') ?>
+<?php 
+echo ini_get('./config.php');
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +27,9 @@
     <!-- Header - Guest -->
     <div class="h-16 z-10 fixed top-0 w-full">
         <div class="h-full float-left mx-5">
-            <a href="<?php echo "../pages/homepage-guest.php"; ?>" title="Logo">
+            <a href="<?php echo "./index.php"; ?>" title="Logo">
                 <img
-                    src="../image/Foodie-logo.png"
+                    src="./user/image/Foodie-logo.png"
                     alt="Restaurant Logo"
                     class="w-auto h-full"
                 />
@@ -37,18 +39,18 @@
         <div class="bg-black h-full">
             <ul class="text-left h-full inline-block">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="<?php echo "../pages/homepage-guest.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Home</a>
+                    <a href="<?php echo "./index.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Home</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Products</a>
+                    <a href="./allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Products</a>
                 </li>
             </ul>
             <ul class="text-right h-full float-right">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../login/signup.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Sign up</a>
+                    <a href="./signup.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Sign up</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../login/login.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log in</a>
+                    <a href="./login.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log in</a>
                 </li>
             </ul>
         </div>

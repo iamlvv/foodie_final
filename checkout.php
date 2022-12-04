@@ -1,5 +1,5 @@
 <?php
-include('../navbar/header-member.php');
+include('./header-member.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -49,7 +49,7 @@ include('../navbar/header-member.php');
         type: "POST",
         success: function(response) {
           alert("Order successfully!");
-          window.location.href = "http://localhost/foodie_final/user/pages/homepage-member.php";
+          window.location.href = "http://localhost/foodie_final/homepage-member.php";
         }
       });
     }
@@ -86,15 +86,15 @@ include('../navbar/header-member.php');
           <div class='mb-5 mt-5'>
             <div class='mb-5'>
               <input type='radio' value='card' name='payment' class='ml-5' checked />
-              <label for='card'>Visa/ Mastercard <img src='../image/visa.png' alt='' class='inline' /> <img src='../image/mastercard.png' alt='' class='inline' /></label>
+              <label for='card'>Visa/ Mastercard <img src='./user/image/visa.png' alt='' class='inline' /> <img src='./user/image/mastercard.png' alt='' class='inline' /></label>
             </div>
             <div class='mb-5'>
               <input type='radio' value='momo' name='payment' class='ml-5' />
-              <label for='momo'>Momo <img src='../image/momo.png' alt='' class='inline' /></label>
+              <label for='momo'>Momo <img src='./user/image/momo.png' alt='' class='inline' /></label>
             </div>
             <div class='mb-5'>
               <input type='radio' value='zalo' name='payment' class='ml-5' />
-              <label for='zalo'>ZaloPay <img src='../image/zalo.png' alt='' class='inline' /></label>
+              <label for='zalo'>ZaloPay <img src='./user/image/zalo.png' alt='' class='inline' /></label>
             </div>
           </div>
         </div>
@@ -143,7 +143,7 @@ include('../navbar/header-member.php');
     </form>
   </div>
   <?php
-  include('../navbar/footer.php');
+  include('./footer.php');
   ?>
 </body>
 
