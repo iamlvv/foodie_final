@@ -105,7 +105,7 @@
                 <input type="submit" name="submit" value="Log in" class="font-bold bg-black text-white w-24 py-2 my-3 text-center rounded-3xl cursor-pointer hover:bg-white hover:text-black shadow-lg transition ease-in"><br>
             </form>
             <p class="text-center"><a href="../login/resetpassword.php"><b><span style="color: rgb(95, 113, 166)">Forgot password?</span></b></a></p><br><br>
-            <p class="text-center">Don't have account?&emsp;&emsp;<a href="../login/signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
+            <p class="text-center">Don't have account?&emsp;&emsp;<a href="./signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
         </div>
         <!-- Login form ends -->
     </body>

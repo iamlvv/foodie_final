@@ -7,7 +7,7 @@
 >
     <h1 class='uppercase text-center md:text-3xl lg:text-5xl pt-52 font-bold font-serif'>asian groceries</h1>
     <div class='flex justify-center my-10 gap-20 text-center'>
-        <button class='rounded-3xl pt-2 pb-3 font-bold px-6 lg:text-2xl md:text-xl lg:w-56 md:w-52 bg-black text-white hover:shadow-md transition ease-in hover:text-black hover:bg-white'><a href="../products/allProducts.php">Let's shopping</a></button>
+        <button class='rounded-3xl pt-2 pb-3 font-bold px-6 lg:text-2xl md:text-xl lg:w-56 md:w-52 bg-black text-white hover:shadow-md transition ease-in hover:text-black hover:bg-white'><a href="./allProducts.php">Let's shopping</a></button>
     </div>
 </div>
 <!-- Suggestion -->
@@ -28,7 +28,7 @@
         </div>
 
         <div class='mt-10 lg:text-right md:text-center'>
-            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold lg:text-2xl md:text-xl hover:drop-shadow-md transition ease-in hover:text-black hover:bg-white'><a href="#" class="">Start Shopping</a></button>
+            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold lg:text-2xl md:text-xl hover:drop-shadow-md transition ease-in hover:text-black hover:bg-white'><a href="./allProducts.php" class="">Start Shopping</a></button>
         </div>
     </div>
 
