@@ -12,13 +12,13 @@
 </head>
 <body>
     <!-- Header - Member -->
-    <div class="h-16">
+    <div class="h-16 z-10 fixed top-0 w-full">
         <div class="h-full float-left mx-5">
             <a href="<?php echo "../pages/homepage-member.php"; ?>" title="Logo">
                 <img
                 src="../image/Foodie-logo.png" 
                 alt="Restaurant Logo"
-                class="w-auto h-full"
+                class="h-full w-full"
                 />
                 <!-- Note: Đường dẫn ảnh -->
             </a>
@@ -26,21 +26,21 @@
         <div class="bg-black h-full">
             <ul class="text-left h-full inline-block">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="<?php echo "../pages/homepage-member.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Home</a>
+                    <a href="<?php echo "../pages/homepage-member.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Home</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Products</a>
+                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Products</a>
                 </li>
             </ul>
             <ul class="text-right h-full float-right">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../cart/cart.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">My cart</a>
+                    <a href="../cart/cart.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My cart</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-28 py-2 my-3 text-center">
-                    <a href="#" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">My account</a>
+                    <a href="#" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My account</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../pages/homepage-guest.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Log out</a>
+                    <a href="../pages/homepage-guest.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log out</a>
                 </li>
             </ul>
         </div>

@@ -1,6 +1,5 @@
-<?php include('../../admin/config/config.php') ?>
-
 <?php
+    include('../navbar/header-guest.php');
     //Check whether the submit button is clicked or not
     if(isset($_POST['submit']))
     {
@@ -9,22 +8,31 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         //2. SQL to check whether the user with email and password exit or not
-        $mysqli = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+        $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
         //3. Excute the query
-        $res = mysqli_query($conn, $mysqli);
+        $res = mysqli_query($mysqli, $sql);
         //4. Count rows to check whether the user exits or not
         $count = mysqli_num_rows($res);
         if($count==1)
         {
             //User available, check type
-            $check_usertype = mysqli_query($conn, "SELECT * FROM user WHERE email='$email' AND password='$password' AND user_type='admin'");
+            $check_usertype = mysqli_query($mysqli, "SELECT * FROM user WHERE email='$email' AND password='$password' AND user_type='admin'");
             $check_usertype = mysqli_num_rows($check_usertype);
+
+
+            $result = $mysqli->query("SELECT `user_id` FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
+            $user_id = $result->fetch_assoc();
+            setcookie('user_id', $user_id['user_id'], time() + (86400 * 30), "/"); // 86400 = 1 day
             if($check_usertype)
             {
+                //User is admin
                 header("Location: http://localhost/foodie_final/admin/components/manageProducts.php");
             }
             else
             {
+               
+                //print_r($_SESSION);
+                //User available and login success
                 header("Location: http://localhost/foodie_final/user/pages/homepage-member.php");
             }
         }
@@ -51,7 +59,6 @@
         <!-- Tailwindcss -->
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Foodie - Log in page</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <style>
             body{
             background-color: rgb(236, 236, 236);
@@ -74,40 +81,11 @@
     </head>
     <body>
         <!-- Log in guest header starts -->
-        <div class="h-16">
-            <div class="h-full float-left mx-5">
-                <a href="<?php echo "../pages/homepage-guest.php"; ?>" title="Logo">
-                    <img
-                        src="../image/Foodie-logo.png"
-                        alt="Restaurant Logo"
-                        class="w-auto h-full"
-                    />
-                </a>
-            </div>
-
-            <div class="bg-black h-full">
-                <ul class="text-left h-full inline-block">
-                    <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                        <a href="<?php echo "../pages/homepage-guest.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Home</a>
-                    </li>
-                    <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                        <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Products</a>
-                    </li>
-                </ul>
-                <ul class="text-right h-full float-right">
-                    <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                        <a href="../login/signup.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Sign up</a>
-                    </li>
-                    <li class="inline-block font-bold bg-white text-black w-24 py-2 my-3 text-center rounded-pill mx-5">
-                        <a href="../login/login.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Log in</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
         <!-- Log in guest header ends -->
         <!-- Login form starts -->
         <div class="login">
-            <h1 class="text-center"><b>LOG IN</b></h1><br>
+            <h1 class="text-center font-bold text-5xl"><b>LOG IN</b></h1><br>
             <?php
                 if(isset($_SESSION['login']))
                 {
@@ -117,15 +95,22 @@
             ?>
             <br><br>
             <form action="" method="POST" class="text-center">
-                <input class="input" type="text" name="email" placeholder="&emsp;Email"><br><br>
-                <input class="input" type="password" name="password" placeholder="&emsp;Password"><br>
-                <input type="submit" name="submit" value="Log in" class="font-bold bg-black text-white w-24 py-2 my-3 text-center rounded-pill"><br>
+                <div>
+                    <input class="input pl-5" type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="mt-5 mb-5">
+                    <input class="input pl-5" type="password" name="password" placeholder="Password" required>
+                </div>
+                <input type="submit" name="submit" value="Log in" class="font-bold bg-black text-white w-24 py-2 my-3 text-center rounded-3xl cursor-pointer hover:bg-white hover:text-black shadow-lg transition ease-in"><br>
             </form>
             <p class="text-center"><a href="../login/resetpassword.php"><b><span style="color: rgb(95, 113, 166)">Forgot password?</span></b></a></p><br><br>
             <p class="text-center">Don't have account?&emsp;&emsp;<a href="../login/signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
         </div>
         <!-- Login form ends -->
     </body>
+    <?php
+        include('../navbar/footer.php');    
+    ?>
 </html>
 
 

@@ -23,7 +23,7 @@
 </head>
 <body>
     <!-- Header - Guest -->
-    <div class="h-16">
+    <div class="h-16 z-10 fixed top-0 w-full">
         <div class="h-full float-left mx-5">
             <a href="<?php echo "../pages/homepage-guest.php"; ?>" title="Logo">
                 <img
@@ -37,18 +37,18 @@
         <div class="bg-black h-full">
             <ul class="text-left h-full inline-block">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="<?php echo "../pages/homepage-guest.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Home</a>
+                    <a href="<?php echo "../pages/homepage-guest.php"; ?>" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Home</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Products</a>
+                    <a href="../products/allProducts.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Products</a>
                 </li>
             </ul>
             <ul class="text-right h-full float-right">
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../login/signup.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Sign up</a>
+                    <a href="../login/signup.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Sign up</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="../login/login.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2">Log in</a>
+                    <a href="../login/login.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log in</a>
                 </li>
             </ul>
         </div>
