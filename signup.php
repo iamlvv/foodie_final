@@ -1,10 +1,11 @@
-<?php include('../navbar/header-guest.php') ?>
+<?php include('./header-guest.php') ?>
 
 <?php
     //Check whether the submit button is click or not
     if (isset($_POST["submit"])) 
     {
     //Get information from form
+        $mysqli = mysqli_connect('localhost', 'root', '', 'foodie_store');
         $fullname = $_POST["fullname"];
         $username = $_POST["username"];
         $email = $_POST["email"];
@@ -104,5 +105,8 @@
             <p class="text-center">Already have an account?&emsp;&emsp;<a href="../login/login.php"><b><span style="color: rgb(95, 113, 166)">Log in</span></b></a></p>
         </div>
         <!-- Sign up form ends -->
+        <?php 
+            include('./footer.php');
+        ?>
     </body>
 </html>
