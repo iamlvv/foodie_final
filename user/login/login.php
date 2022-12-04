@@ -9,15 +9,15 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
         //2. SQL to check whether the user with email and password exit or not
-        $mysqli = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+        $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
         //3. Excute the query
-        $res = mysqli_query($conn, $mysqli);
+        $res = mysqli_query($mysqli, $sql);
         //4. Count rows to check whether the user exits or not
         $count = mysqli_num_rows($res);
         if($count==1)
         {
             //User available, check type
-            $check_usertype = mysqli_query($conn, "SELECT * FROM user WHERE email='$email' AND password='$password' AND user_type='admin'");
+            $check_usertype = mysqli_query($mysqli, "SELECT * FROM user WHERE email='$email' AND password='$password' AND user_type='admin'");
             $check_usertype = mysqli_num_rows($check_usertype);
             if($check_usertype)
             {
