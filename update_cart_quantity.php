@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../admin/config/config.php';
+    require_once './config.php';
     
     function updateCartQuantity($productId, $productQuantity) {
         $con = mysqli_connect('localhost', 'root', '','foodie_store');

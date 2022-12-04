@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../admin/config/config.php';
+    require_once './config.php';
     function insertToDB($orderId, $userId, $firstname, $lastname, $phone, $email, $address, $totalProducts, $totalPrice, $note, $paymentmethod, $date) {
         $userId = $_COOKIE['user_id'];
         $con = mysqli_connect('localhost', 'root', '','foodie_store');

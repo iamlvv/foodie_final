@@ -1,5 +1,5 @@
 <?php 
-    require_once '../../admin/config/config.php';
+    require_once './config.php';
     function removeFromDB($productId) {
         $con = mysqli_connect('localhost', 'root', '', 'foodie_store');
         $sql = "DELETE FROM cart WHERE product_id = $productId";

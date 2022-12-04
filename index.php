@@ -7,8 +7,8 @@
 >
     <h1 class='uppercase text-center md:text-3xl lg:text-5xl pt-52 font-bold font-serif'>asian groceries</h1>
     <div class='flex justify-center my-10 gap-20 text-center'>
-        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="../login/signup.php">Sign up</a></button>
-        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="../login/login.php">Login</a></button>
+        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="./signup.php">Sign up</a></button>
+        <button class='rounded-3xl pt-3 pb-4 font-bold px-6 lg:text-3xl md:text-xl lg:w-44 md:w-32 bg-black text-white hover:shadow-md transition ease-in hover:bg-white hover:text-black'><a href="./login.php">Login</a></button>
     </div>
 </div>
 <!-- Suggestion -->

@@ -27,7 +27,7 @@
             if($check_usertype)
             {
                 //User is admin
-                header("Location: http://localhost/foodie_final/admin/components/manageProducts.php");
+                header("Location: http://localhost/foodie_final/manageProducts.php");
             }
             else
             {
@@ -85,7 +85,7 @@
         
         <!-- Log in guest header ends -->
         <!-- Login form starts -->
-        <div class="login">
+        <div class="login ">
             <h1 class="text-center font-bold text-5xl"><b>LOG IN</b></h1><br>
             <?php
                 if(isset($_SESSION['login']))
