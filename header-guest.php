@@ -25,8 +25,9 @@ echo ini_get('./config.php');
     
     <title>Foodie - Homepage</title>
     <style>
-        * {
-            /* font-family: 'Anek Devanagari', sans-serif; */
+        #toast-container
+        {   
+            margin-top: 60px;
         }
     </style>
 </head>

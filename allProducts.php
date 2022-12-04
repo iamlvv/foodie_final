@@ -6,7 +6,7 @@
     $count = $result->num_rows;
 ?>
 
-<div class='my-5'>
+<div class='my-20'>
     <h1 class='text-3xl pt-5 pl-10 mb-10 font-bold'>Products</h1>
     <div class='grid lg:grid-cols-5 md:grid-cols-4 ml-28 mr-28 gap-9 md:ml-10 md:mr-10'>
 <?php

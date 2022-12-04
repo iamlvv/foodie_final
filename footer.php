@@ -6,16 +6,16 @@
 
         <div class='flex flex-col my-auto'>
             <div class='mb-5'>
-                
-                <p class='inline ml-3'>Đại học Bách khoa TP.HCM</p>
+                <img src="./user/image/contact-sus.jpg" alt="" class="w-7 h-7 inline float-left mx-3">
+                <p class='ml-3'>Đại học Bách khoa TP.HCM</p>
             </div>
             <div class='mb-5'>
-                
-                <p class='inline ml-3'>0123456789</p>
+                <img src="./user/image/contact-phone.jpg" alt="" class="w-7 h-7 inline float-left mx-3">
+                <p class='ml-3'>0123456789</p>
             </div>
             <div>
-                
-                <p class='inline ml-3'>laptrinhweb@hcmut.edu.vn</p>
+                <img src="./user/image/contact-link.jpg" alt="" class="w-7 h-7 inline float-left mx-3">
+                <p class='ml-3'>laptrinhweb@hcmut.edu.vn</p>
             </div>
         </div>
         <div class='mt-2'>

@@ -133,7 +133,7 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
                         $totalPrice += $row['price'] * $row['quantity'];
                     }
                 } else {
-                    echo "<h5 class='ml-10'>Your cart is empty now. <a href='../pages/homepage-member.php' class='font-bold'>Continue shopping.</a></h5>";
+                    echo "<h5 class='ml-10'>Your cart is empty now. <a href='./homepage-member.php' class='font-bold'>Continue shopping.</a></h5>";
                 }
                 // while ($row = $result->fetch_assoc()) {
                 //     Itemcart($row['product_id'], $row['product_name'], $row['price'], $row['quantity'], $row['product_image']);

@@ -7,7 +7,7 @@
     $count = $result->num_rows;
 ?>
 
-<div class='my-5'>
+<div class='my-20'>
     <h1 class='lg:text-3xl md:text-2xl pt-5 pl-10 mb-5 font-bold'>Product Information</h1>
     <div class='grid grid-cols-2 h-full mx-28 gap-5 md:ml-10 md:mr-10 items-center'>
         
@@ -27,7 +27,7 @@
             </p>
             <p class='lg:text-2xl text-red-600 font-bold mt-2 md:text-base'>
                 <?php echo $rows['price']?> VND
-                <button class='rounded-3xl shadow-lg my-3 float-right mr-5 text-xl bg-black px-5 py-2 text-white cart-btn' value="<?php echo $_GET['product_id']?>">
+                <button class='rounded-3xl shadow-lg my-3 float-right mr-5 text-xl bg-black px-5 py-2 text-white cart-btn hover:bg-white hover:text-black transition ease-in' value="<?php echo $_GET['product_id']?>">
                     Add to cart
                 </button>
             </p>
@@ -74,10 +74,10 @@
         </div>
         <textarea placeholder="Write your feedback here..." name="textarea" class="p-3 border-gray border active:border-black border-solid lg:ml-14 md:ml-16 hover:shadow-xl lg:w-11/12 md:w-10/12 h-44 resize-none"></textarea>
         <div class="h-12 mb-7 mt-5">
-            <button class='block rounded-3xl shadow-lg float-right mr-10 text-2xl font-bold bg-black px-6 py-2 text-white submit-btn' value="<?php echo $_GET['product_id']?>">
+            <button class='block rounded-3xl shadow-lg float-right mr-10 text-2xl font-bold bg-black px-6 py-2 text-white submit-btn hover:bg-white hover:text-black transition ease-in' value="<?php echo $_GET['product_id']?>">
                 Post
             </button>
-            <button class='block rounded-3xl shadow-lg float-right mr-5 text-2xl font-bold bg-black px-6 py-2 text-white cancel-btn'>
+            <button class='block rounded-3xl shadow-lg float-right mr-5 text-2xl font-bold bg-black px-6 py-2 text-white cancel-btn hover:bg-white hover:text-black transition ease-in'>
                 Cancel
             </button>
         </div>
