@@ -58,7 +58,7 @@
                     <a href="./cart.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My cart</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-28 py-2 my-3 text-center">
-                    <a href="#" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My account</a>
+                    <a href="./userDetail.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My account</a>
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
                     <a href="./index.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log out</a>
