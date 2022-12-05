@@ -27,7 +27,7 @@
             if($check_usertype)
             {
                 //User is admin
-                header("Location: http://localhost/foodie_final/manageProducts.php");
+                header("Location: http://localhost/foodie_final/admin/index.php");
             }
             else
             {
