@@ -7,10 +7,11 @@ if (!isset($_COOKIE['user_id'])) {
 <?php include('partials/sideBar.php');?>
 
     <div class="flex-1">
+        <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">USERS</h1>
         <div class="wrapper grid grid-cols-4 gap-4">
 
             <?php
-            //Create a SQL Query to Get all the Food
+            //Create a SQL Query to Get all the user
             $sql = "SELECT * FROM user WHERE user_type = 'user'";
 
             //Execute the qUery
@@ -19,12 +20,9 @@ if (!isset($_COOKIE['user_id'])) {
             //Count Rows to check whether we have foods or not
             $count = $res->num_rows;
 
-            //Create Serial Number VAriable and Set Default VAlue as 1
-            $sn = 1;
-
             if ($count > 0) {
-                //We have food in Database
-                //Get the Foods from Database and Display
+                //We have user in Database
+                //Get the user from Database and Display
                 while ($row = mysqli_fetch_assoc($res)) {
                     //get the values from individual columns
                     $id = $row['user_id'];
@@ -51,7 +49,7 @@ if (!isset($_COOKIE['user_id'])) {
             <?php
                 }
             } else {
-                //Food not Added in Database
+                //user not Added in Database
                 echo "<tr> <td colspan='7' class='error'> . </td> </tr>";
             }
             ?>
@@ -59,5 +57,5 @@ if (!isset($_COOKIE['user_id'])) {
     </div>
 </div>
 
-<?php include('partials/modal.php'); ?>
+<?php include('partials/userModal.php'); ?>
 <?php include('partials/footer.php'); ?>
