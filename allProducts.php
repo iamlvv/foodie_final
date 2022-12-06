@@ -1,4 +1,8 @@
-<?php include('./header-member.php')?>
+<?php include('./header-member.php');
+    if (!isset($_COOKIE['user_id'])) {
+        header('Location: ./login.php');
+    }
+?>
 
 <?php 
     $sql= "SELECT * FROM product";

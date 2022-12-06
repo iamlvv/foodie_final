@@ -67,7 +67,7 @@
                 </li>
                 <li class="inline-block font-bold bg-black text-white w-24 py-2 text-center">
                     <form method="POST">
-                        <input type="submit" name="logout" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in cursor-pointer" value="logout"/>
+                        <input type="submit" name="logout" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in cursor-pointer" value="Log out"/>
                     </form>
                     <!-- <a href="./index.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log out</a> -->
                 </li>
