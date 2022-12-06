@@ -107,7 +107,7 @@
                 <input class="input pl-5" type="password" name="confirmpassword" placeholder="Confirm password" required><br><br>
                 <input type="submit" name="submit" value="Create account" class="font-bold bg-black text-white w-48 py-2 my-3 text-center rounded-3xl cursor-pointer hover:bg-white hover:text-black shadow-lg transition ease-in"><br><br>
             </form>
-            <p class="text-center">Already have an account?&emsp;&emsp;<a href="../login/login.php"><b><span style="color: rgb(95, 113, 166)">Log in</span></b></a></p>
+            <p class="text-center">Already have an account?&emsp;&emsp;<a href="login.php"><b><span style="color: rgb(95, 113, 166)">Log in</span></b></a></p>
         </div>
         <!-- Sign up form ends -->
         <?php 

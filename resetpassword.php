@@ -19,46 +19,8 @@
             $sql = "UPDATE user SET password='$newpassword' WHERE email = '$email'";
             if(mysqli_query($mysqli, $sql))
             {
-                //echo "thanh cong";
-                //Send new password to email
-                require "PHPMailer-master/src/PHPMailer.php"; 
-                require "PHPMailer-master/src/SMTP.php"; 
-                require 'PHPMailer-master/src/Exception.php'; 
-                $mail = new PHPMailer\PHPMailer\PHPMailer(true);//true:enables exceptions
-                try
-                {
-                    $mail->SMTPDebug = 0; //0,1,2: chế độ debug
-                    $mail->isSMTP();  
-                    $mail->CharSet  = "utf-8";
-                    $mail->Host = 'smtp.gmail.com';  //SMTP servers
-                    $mail->SMTPAuth = true; // Enable authentication
-                    $mail->Username = 'foodiestore6@gmail.com'; // SMTP username
-                    $mail->Password = 'abc123@@';   // SMTP password
-                    $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
-                    $mail->Port = 465;  // port to connect to                
-                    $mail->setFrom('foodiestore6@gmail.com', 'Foodie' ); 
-                    $mail->addAddress($email); 
-                    $mail->isHTML(true);  // Set email format to HTML
-                    $mail->Subject = 'New password';
-                    $noidungthu = "<p>You receive this email because you required for a new password from Foodie.</p>
-                    Your new password is {$newpassword}"; 
-                    $mail->Body = $noidungthu;
-                    $mail->smtpConnect( array(
-                        "ssl" => array(
-                            "verify_peer" => false,
-                            "verify_peer_name" => false,
-                            "allow_self_signed" => true
-                        )
-                    ));
-                    $mail->send();
-                    echo 'Đã gửi mail xong';
-                }
-                catch (Exception $e)
-                {
-                    echo 'Error: ', $mail->ErrorInfo;
-                }
-                //echo "New password is sent"
-                //Go to login page
+                //echo "thanh cong"
+                echo '<script language="javascript">alert("Your new password is sent to your email.");</script>';
             }
             else
             {

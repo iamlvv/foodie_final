@@ -29,7 +29,7 @@
         </div>
 
         <div class='mt-10 lg:text-right md:text-center'>
-            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold text-2xl hover:drop-shadow-md transition ease-in hover:bg-white hover:text-black'><a href="#" class="">Start Shopping</a></button>
+            <button class='bg-black text-white pt-2 pb-3 px-6 rounded-3xl font-bold text-2xl hover:drop-shadow-md transition ease-in hover:bg-white hover:text-black'><a href="./login.php" class="">Start Shopping</a></button>
         </div>
     </div>
 

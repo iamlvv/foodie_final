@@ -6,8 +6,8 @@
 
 <!-- Main Content Section Starts -->
 
-<div class="w-full  bg-slate-300 bg-cover h-96 pt-10">
-    <h1 class="font-bold text-5xl text-center pt-5 ">DASHBOARD</h1>
+<div class="w-full  bg-slate-300 bg-cover min-h-screen pt-10">
+    <h1 class="font-bold text-5xl text-center mt-36 pb-10 ">DASHBOARD</h1>
 
 
 
