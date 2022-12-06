@@ -4,7 +4,7 @@ include('./header-member.php');
 function Itemcart($productId, $productName, $productPrice, $productQuantity, $productImg)
 {
     $element = "
-        <div class='grid grid-cols-5 mb-5'>
+        <div class='grid grid-cols-5 mb-5 '>
         <div class='col-span-1'>
             <img src={$productImg} alt='' class='mx-auto w-1/2' />
         </div>
@@ -18,14 +18,14 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
         </div>
         <div class='col-span-1 flex flex-col'>
             <div>
-                <div class='flex flex-end items-center'>
+                <div class='flex flex-end items-center '>
                     <button type='button' class='text-3xl' onclick = 'handleDecrease($productId, $productPrice)'>-</button>
                     <input type='text' placeholder={$productQuantity} disabled class='w-12 text-center bg-white text-black' id='input-quantity-$productId' value='$productQuantity'/>
                     <button type='button' class='text-3xl' onclick = 'handleIncrease($productId, $productPrice)'>+</button>
                 </div>
             </div>
             <div>
-                <button class='bg-red-500 text-white rounded-md px-3 py-1 mt-5 hover:bg-red-700 transition ease-in' onclick ='handleRemove($productId)'>Remove</button>
+                <button class='bg-red-500 text-white rounded-md px-3 py-1 mt-5 hover:bg-red-700 transition ease-in' onclick ='handleRemove($productId, $productQuantity)'>Remove</button>
             </div>
         </div>
     </div>
@@ -48,7 +48,8 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
             var inputQuantityElement = $("#input-quantity-" + productId);
             var newQuantity = parseInt($(inputQuantityElement).val()) + 1;
             var newPrice = newQuantity * productPrice;
-            saveToDB(productId, newQuantity, newPrice);
+            var flag = 0;
+            saveToDB(productId, newQuantity, newPrice, flag);
             //var value = document.getElementById("$productId").value;
             //console.log(value);
             //getTotalPrice();
@@ -68,19 +69,23 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
 
         function handleDecrease(productId, productPrice) {
             var inputQuantityElement = $("#input-quantity-" + productId);
+            var flag = 1;
             if ($(inputQuantityElement).val() > 1) {
                 var newQuantity = parseInt($(inputQuantityElement).val()) - 1;
                 var newPrice = newQuantity * productPrice;
-                saveToDB(productId, newQuantity, newPrice);
+                saveToDB(productId, newQuantity, newPrice, flag);
+            }
+            else {
+                handleRemove(productId, 1);
             }
         }
 
-        function saveToDB(productId, newQuantity, newPrice) {
+        function saveToDB(productId, newQuantity, newPrice, flag) {
             var inputQuantityElement = $("#input-quantity-" + productId);
             //var priceElement = $("#price-" + productId);
             $.ajax({
                 url: "update_cart_quantity.php",
-                data: "product_id=" + productId + "&quantity=" + newQuantity,
+                data: "product_id=" + productId + "&quantity=" + newQuantity + "&flag=" + flag,
                 type: "POST",
                 success: function (response) {
                     $(inputQuantityElement).val(newQuantity);
@@ -104,10 +109,10 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
                 }
             })
         }
-        function handleRemove(productId) {
+        function handleRemove(productId, productQuantity) {
             $.ajax({
                 url: "remove_cart_item.php",
-                data: "product_id=" + productId,
+                data: "product_id=" + productId + "&quantity=" + productQuantity,
                 type: "POST",
                 success: function (response) {
                     window.location.reload();

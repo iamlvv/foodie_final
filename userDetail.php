@@ -1,6 +1,6 @@
 <?php
     include('./header-member.php');
-    include('./config.php');
+    //include('./config.php');
     $user_id = $_COOKIE['user_id'];
     $user_result = $mysqli->query("SELECT * FROM user WHERE user_id=".$user_id);
     $result = $user_result->fetch_assoc();
