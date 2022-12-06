@@ -20,7 +20,7 @@ if (isset($_GET['delete'])) {
 
 
     <div class="w-full overflow-x-auto relative shadow-md sm:rounded-lg">
-        <h1 class="text-center mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">ORDERS</h1>
+        <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">ORDERS</h1>
 
         <?php
         //Create a SQL Query to Get all the ORDER 
