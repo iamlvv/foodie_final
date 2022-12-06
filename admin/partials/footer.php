@@ -34,14 +34,49 @@
 <script type="text/javascript">
     $(document).ready(function() {
 
+        
+        //open modal add product
+        $('.addProduct').click(function() {
+            var modal = $('#addProductModal');
+            modal.show();
 
+        });
+        
         $('#close').click(function() {
             var modal = $('#userModal');
             modal.hide();
 
         });
+        
+        $('#closeBtn').click(function() {
 
+            var modal2 = $('#productModal');
+            modal2.hide();
+        });
 
+        $('#btnCloseAddProductModal').click(function() {
+
+            var modal3 = $('#addProductModal');
+            modal3.hide();
+        });
+
+        //add product
+        $(document).ready(function() {
+
+            var formData = $('#saveProduct');
+            $('.btnSaveProduct').ready(function() {
+            });
+            $.ajax({
+                type: "POST",
+                url: "code.php",
+                data: $("#saveProduct input").serialize(),
+
+                success: function(data) {
+                    console.log(data);
+                }
+            });
+
+        });
 
         $(document).on('click', '.userInfo', function() {
 
@@ -69,7 +104,30 @@
             });
         });
 
+            $(document).on('click', '.productInfo', function() {
+            var product_id = $(this).val();
+            $.ajax({
+                type: "GET",
+                url: "code.php?product_id=" + product_id,
+                success: function(response) {
+                    console.log('Response:', response);
 
+                    var res = $.parseJSON(response);
+                    if (res.status == 404) {
+
+                        alert(res.message);
+                    } else if (res.status == 200) {
+                        $('#view_id').text(res.data.product_id);
+                        $('#view_image').attr('src', res.data.product_image);
+                        $('#view_name').text(res.data.product_name);
+                        $('#view_description').text(res.data.description);
+                        $('#view_price').text(res.data.price);
+                        $('#view_quantity').text(res.data.quantity);
+                        $('#productModal').show();
+                    }
+                }
+            });
+        });
 
         $(document).on('click', '.delUserBtn', function(e) {
             e.preventDefault();
@@ -105,8 +163,42 @@
                 });
             }
         });
+        
+        
+         $(document).on('click', '.delProductBtn', function(e) {
+            e.preventDefault();
 
+            if (confirm('Are you sure you want to delete this data?')) {
+                var product_id = $(this).val();
+                $.ajax({
+                    type: "POST",
+                    url: "code.php",
+                    data: {
+                        'delete_product': true,
+                        'product_id': product_id
+                    },
+                    success: function(response) {
 
+                        console.log('Response:', response);
+
+                        var res = $.parseJSON(response);
+                        if (res.status == 500) {
+
+                            alert(res.message);
+                        } else {
+                            alertify.set('notifier', 'position', 'top-right');
+                            alertify.success(res.message);
+
+                            setTimeout(function() {
+
+                                location.reload();
+                            }, 800);
+
+                        }
+                    }
+                });
+            }
+        });
 
     })
 </script>
