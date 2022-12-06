@@ -1,10 +1,6 @@
-<?php include('partials/header.php'); ?>
+<?php include('partials/header.php');?>
 <div class="flex w-full bg-white ">
-    <?php include('partials/sideBar.php');
-
-
-    
-    ?>
+<?php include('partials/sideBar.php');?>
 
     <div class="flex-1">
         <div class="wrapper grid grid-cols-4 gap-4">
@@ -46,37 +42,18 @@
                             <button value="<?php echo $id; ?>" class="userInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500" type="button" name="view_detail" data-id="">
                                 Details
                             </button>
-
-
                         </div>
                     </div>
-
             <?php
                 }
             } else {
                 //Food not Added in Database
                 echo "<tr> <td colspan='7' class='error'> . </td> </tr>";
             }
-
             ?>
-
-
-
         </div>
-
-
-
-
-
-
     </div>
 </div>
 
-
-
 <?php include('partials/modal.php'); ?>
-
-
-
-
 <?php include('partials/footer.php'); ?>
