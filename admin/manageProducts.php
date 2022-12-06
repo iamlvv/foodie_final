@@ -94,14 +94,17 @@
                     $quantity = $row['quantity'];
 
             ?>
-                    <div class="">
-                        <div class="grid bg-orange-100 flex flex-col bg-white rounded-lg shadow-md m-5 overflow-hidden ">
-                            <img src="<?= $product_image; ?>" class=" h-20 m-6" alt="order icon">
-                            <h1 class="px-2 pb-5"><?= $name; ?></h1>
-                            <a href="manageFeedbacks.php" class="bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500">
-                                <?= $price; ?></a>
+                   <div class="">
+                        <div class="grid  bg-orange-100 text-center rounded-lg shadow-md m-5 overflow-hidden ">
+                            <img src="<?= $product_image; ?>" class=" h-20 my-5 mx-auto" alt="order icon">
+                            <h1 class="px-2"><?= $name; ?></h1>
+                            <p class="mb-2"><?= $price; ?></p>
+                            <button value="<?php echo $id; ?>" class="productInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500" type="button" name="view_detail" data-id="">
+                                Details
+                            </button>
                         </div>
                     </div>
+
 
             <?php
                 }
