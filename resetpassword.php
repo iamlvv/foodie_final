@@ -57,25 +57,46 @@
             body{
             background-color: rgb(236, 236, 236);
             }
-            .resetpassword{
-                border: 0px;
-                width: 500px;
-                background-color: white;
-                border-radius: 12px;
-                margin: 10% auto;
-                padding: 2%;
+            @media all and (min-width: 1024px) {
+                .resetpassword{
+                    border: 0px;
+                    width: 500px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 20px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 400px;
+                    height: 40px;   
+                }
             }
-            .input{
-                background-color:rgb(236, 236, 236);
-                border-radius: 5px;
-                width: 90%;
-                height: 40px;   
+            @media all and (min-width: 768px) {
+                .resetpassword{
+                    border: 0px;
+                    width: 375px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 15px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 300px;
+                    height: 30px;   
+                }
+                .h1{
+                    font-size: 20px;
+                }
             }
         </style>
     </head>
     <body>
         <div class="resetpassword">
-            <h1 class="text-center"><b>RESET YOUR PASSWORD</b></h1><br>
+            <h1 class="h1 text-center"><b>RESET YOUR PASSWORD</b></h1><br>
             <p class="text-center text-muted">Enter your email</p>
             <br><br>
             <form action="" method="POST" class="text-center">
@@ -87,5 +108,8 @@
             <p class="text-center">Don't have account?&emsp;&emsp;<a href="./signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
         </div>
     </body>
+    <?php
+        include('./footer.php');    
+    ?>
 </html>
 

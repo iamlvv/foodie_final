@@ -76,7 +76,7 @@
             body{
             background-color: rgb(236, 236, 236);
             }
-            .signup{
+            /*.signup{
                 border: 0px;
                 width: 30%;
                 background-color: white;
@@ -89,6 +89,41 @@
                 border-radius: 5px;
                 width: 90%;
                 height: 40px;   
+            }*/
+            @media all and (min-width: 1024px) {
+                .signup{
+                    border: 0px;
+                    width: 500px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 20px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 400px;
+                    height: 40px;   
+                }
+            }
+            @media all and (min-width: 768px) {
+                .signup{
+                    border: 0px;
+                    width: 375px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 15px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 300px;
+                    height: 30px;   
+                }
+                .h1{
+                    font-size: 20px;
+                }
             }
         </style>
     </head>
@@ -98,7 +133,7 @@
         <!-- Sign up header ends -->
         <!-- Sign up form starts -->
         <div class="signup">
-            <h1 class="text-center font-bold text-5xl"><b>SIGN UP</b></h1><br>
+            <h1 class="h1 text-center font-bold text-5xl"><b>SIGN UP</b></h1><br>
             <form action="" method="POST" class="text-center">
                 <input class="input pl-5" type="text" name="fullname" placeholder="Full name" required><br><br>
                 <input class="input pl-5" type="text" name="username" placeholder="User name" required><br><br>

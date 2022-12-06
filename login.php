@@ -64,20 +64,57 @@
             body{
             background-color: rgb(236, 236, 236);
             }
-            .login{
-                border: 0px;
-                width: 500px;
-                background-color: white;
-                border-radius: 12px;
-                margin: 10% auto;
-                padding: 2%;
+            @media all and (min-width: 1024px) {
+                .login{
+                    border: 0px;
+                    width: 500px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 20px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 400px;
+                    height: 40px;   
+                }
             }
-            .input{
-                background-color:rgb(236, 236, 236);
-                border-radius: 5px;
-                width: 90%;
-                height: 40px;   
+            @media all and (min-width: 768px) {
+                .login{
+                    border: 0px;
+                    width: 375px;
+                    background-color: white;
+                    border-radius: 12px;
+                    margin: 100px auto;
+                    padding: 15px;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 300px;
+                    height: 30px;   
+                }
+                .h1{
+                    font-size: 20px;
+                }
             }
+            /*@media all and (min-width: 768px) {
+                .login{
+                    border: 0px;
+                    width: 350px;
+                    background-color: white;
+                    border-radius: 8px;
+                    margin: 10% auto;
+                    padding: 2%;
+                }
+                .input{
+                    background-color:rgb(236, 236, 236);
+                    border-radius: 5px;
+                    width: 90%;
+                    height: 40px;   
+                }
+            }*/
         </style>
     </head>
     <body>
@@ -86,7 +123,7 @@
         <!-- Log in guest header ends -->
         <!-- Login form starts -->
         <div class="login ">
-            <h1 class="text-center font-bold text-5xl"><b>LOG IN</b></h1><br>
+            <h1 class="h1 text-center font-bold text-5xl"><b>LOG IN</b></h1><br>
             <?php
                 if(isset($_SESSION['login']))
                 {
