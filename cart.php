@@ -16,7 +16,7 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
                 $productName
             </div>
             <div class=''>
-                $productPrice
+                $productPrice VND
             </div>
         </div>
         <div class='col-span-1 flex flex-col'>
@@ -100,7 +100,7 @@ function Itemcart($productId, $productName, $productPrice, $productQuantity, $pr
                     // });
                     // $("#totalPrice").val(totalQuantity);
                     
-                }
+                },
             })
         }
         function getTotalPrice() {

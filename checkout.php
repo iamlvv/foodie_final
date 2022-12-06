@@ -11,12 +11,16 @@ include('./header-member.php');
   <title>Checkout</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@7.29.2/dist/sweetalert2.min.css">
   <script>
     // window.onload = function() {
     //   var element = document.getElementById("main");
     //   element.scrollIntoView(true);
     // }
+    document.getElementById("formorder").addEventListener("click", function(event){
+  event.preventDefault()
+});
     function handleClick() {
       var firstname = document.getElementById("first-name").value;
       var lastname = document.getElementById("last-name").value;
@@ -48,7 +52,7 @@ include('./header-member.php');
         data: "order_id=" + orderId + "&user_id=" + userId + "&first_name=" + firstname + "&last_name=" + lastname + "&phone=" + phone + "&email=" + email + "&address=" + address + "&total_products=" + totalProducts + "&total_price=" + totalPrice + "&desc_note=" + note + "&payment_method=" + paymentmethod + "&created_date=" + date,
         type: "POST",
         success: function(response) {
-          alert("Order successfully!");
+          alert("You ordered successfully");
           window.location.href = "http://localhost/foodie_final/homepage-member.php";
         }
       });
@@ -59,7 +63,7 @@ include('./header-member.php');
 
 <body>
   <div class=' bg-gray-200 pb-32 pt-20 mt-10' id='main'>
-    <form class='shadow-lg lg:ml-32 lg:mr-32 bg-white lg:grid lg:grid-cols-4 md:ml-20 md:mr-20'>
+    <form class='shadow-lg lg:ml-32 lg:mr-32 bg-white lg:grid lg:grid-cols-4 md:ml-20 md:mr-20' id="formorder">
       <div class='col-span-3 lg:pl-5 flex flex-col'>
         <div class=''>
           <h1 class='mt-5 font-bold md:pl-5'>Recipient name</h1>
