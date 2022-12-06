@@ -50,7 +50,14 @@
                     product_id: product_id,
                 },
                 success:function(response){
-                    toastr.success('Successfully add to cart');
+                    if(response == -1)
+                    {
+                        toastr.warning('Out of stock!');
+                    }
+                    else 
+                    {
+                        toastr.success('Successfully add to cart');
+                    }
                 }
             });
         });
