@@ -23,7 +23,7 @@
 
             $result = $mysqli->query("SELECT `user_id` FROM `user` WHERE `email` = '$email' AND `password` = '$password'");
             $user_id = $result->fetch_assoc();
-            setcookie('user_id', $user_id['user_id'], time() + (86400 * 30), "/"); // 86400 = 1 day
+            setcookie('user_id', $user_id['user_id'], time() + (86400), "/"); // 86400 = 1 day
             if($check_usertype)
             {
                 //User is admin

@@ -1,4 +1,9 @@
-<?php include('./header-guest.php') ?>
+<?php include('./header-guest.php');
+    if (isset($_POST['logout'])) {
+        setcookie('user_id', null, -1 , "/"); // 86400 = 1 day
+        header('location: index.php');
+    }
+?>
 
 <?php
     //Check whether the submit button is click or not

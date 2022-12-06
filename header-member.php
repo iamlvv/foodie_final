@@ -1,4 +1,9 @@
-<?php include('./config.php') ?>
+<?php include('./config.php') ;
+    if (isset($_POST['logout'])) {
+        setcookie('user_id', null, -1 , "/"); // 86400 = 1 day
+        header('location: index.php');
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -60,8 +65,11 @@
                 <li class="inline-block font-bold bg-black text-white w-28 py-2 my-3 text-center">
                     <a href="./userDetail.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">My account</a>
                 </li>
-                <li class="inline-block font-bold bg-black text-white w-24 py-2 my-3 text-center">
-                    <a href="./index.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log out</a>
+                <li class="inline-block font-bold bg-black text-white w-24 py-2 text-center">
+                    <form method="POST">
+                        <input type="submit" name="logout" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in cursor-pointer" value="logout"/>
+                    </form>
+                    <!-- <a href="./index.php" class=" hover:text-black hover:bg-white rounded-full px-3 py-2 transition ease-in">Log out</a> -->
                 </li>
             </ul>
         </div>

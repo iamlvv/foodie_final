@@ -1,6 +1,9 @@
 <?php
 //require_once '../../admin/config/config.php';
 include('./header-member.php');
+if (!isset($_COOKIE['user_id'])) {
+    header('Location: login.php');
+}
 function Itemcart($productId, $productName, $productPrice, $productQuantity, $productImg)
 {
     $element = "

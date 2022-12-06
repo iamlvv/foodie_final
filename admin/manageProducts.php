@@ -1,4 +1,8 @@
-<?php include('partials/header.php'); ?>
+<?php include('partials/header.php'); 
+    if (!isset($_COOKIE['user_id'])) {
+        header('Location: ../login.php');
+    }
+?>
 
 <div class="flex w-full bg-white ">
     <?php include('partials/sideBar.php'); ?>
