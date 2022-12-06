@@ -6,6 +6,8 @@
     {
         //Check email is exit or not
         $email = $_POST["email"];
+        $newpassword = $_POST['newpassword'];
+        $confirmnewpassword = $_POST['confirmnewpassword'];
         $sql = "SELECT * FROM user WHERE email = '$email'";
         $kq = mysqli_query($mysqli, $sql);
         if(mysqli_num_rows($kq) == 0)
@@ -14,18 +16,22 @@
         }
         else
         {
-            //Create new random password in database
-            $newpassword = substr(md5(rand(0, 999999)), 0, 8);
+            if($newpassword != $confirmnewpassword)
+        {
+            echo '<script language="javascript">alert("New password did not match.");</script>';
+        }
+        else
+        {
             $sql = "UPDATE user SET password='$newpassword' WHERE email = '$email'";
             if(mysqli_query($mysqli, $sql))
             {
-                //echo "thanh cong"
-                echo '<script language="javascript">alert("Your new password is sent to your email.");</script>';
+                echo '<script language="javascript">alert("Reset password successfully.");window.location="login.php";</script>';
             }
             else
             {
-                echo '<script language="javascript">alert("Reset password error, plase try again.");</script>';
+                echo '<script language="javascript">alert("Reset password error, please try again.");</script>';
             }
+        }
         }
     }
 ?>
@@ -68,21 +74,18 @@
         </style>
     </head>
     <body>
-        <!-- Log in guest header starts -->
-        
-        <!-- Log in guest header ends -->
-        <!-- Reset password form starts -->
         <div class="resetpassword">
-            <h1 class="text-center"><b>FORGOT YOUR PASSWORD?</b></h1><br>
-            <p class="text-center text-muted">We'll send you a new password</p>
+            <h1 class="text-center"><b>RESET YOUR PASSWORD</b></h1><br>
+            <p class="text-center text-muted">Enter your email</p>
             <br><br>
             <form action="" method="POST" class="text-center">
                 <input class="input" type="text" name="email" placeholder="&emsp;Email"><br><br>
+                <input class="input" type="text" name="newpassword" placeholder="&emsp;New password"><br><br>
+                <input class="input" type="text" name="confirmnewpassword" placeholder="&emsp;Confirm new password"><br><br>
                 <input type="submit" name="submit" value="Reset password" class="font-bold bg-black text-white w-48 py-2 my-3 text-center rounded-pill"><br><br>
             </form>
             <p class="text-center">Don't have account?&emsp;&emsp;<a href="./signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
         </div>
-        <!-- Login form ends -->
     </body>
 </html>
 
