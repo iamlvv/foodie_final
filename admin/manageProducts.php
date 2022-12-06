@@ -106,8 +106,8 @@
             <?php
                 }
             } else {
-                //Food not Added in Database
-                echo "<tr> <td colspan='7' class='error'> . </td> </tr>";
+                 //Don't have product yet
+                    echo " <div class='flex items-center justify-center border-solid border-4 border-gray-800 rounded-lg w-48 h-28 mx-auto my-0 font-bold'> NO PRODUCTS YET!!! </div>";
             }
 
             ?>
