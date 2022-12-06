@@ -1,4 +1,4 @@
-<div class="w-80 min-h-full overflow-y-auto py-4 px-3 bg-slate-700 rounded ">
+<div class="w-80 min-h-full overflow-y-auto py-4 px-3 bg-slate-700">
     <ul class="space-y-2">
         <li>
             <a href="manageProducts.php" class="flex items-center p-2 text-base font-bold text-white rounded-lg  hover:bg-gray-100 hover:text-gray-900">
