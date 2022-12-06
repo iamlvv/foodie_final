@@ -123,5 +123,6 @@
 </div>
 
 
+<?php include('partials/productModal.php'); ?>
 
 <?php include('partials/footer.php'); ?>
