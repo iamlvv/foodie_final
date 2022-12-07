@@ -137,7 +137,7 @@
             <form action="" method="POST" class="text-center">
                 <input class="input pl-5" type="text" name="fullname" placeholder="Full name" required><br><br>
                 <input class="input pl-5" type="text" name="username" placeholder="User name" required><br><br>
-                <input class="input pl-5" type="text" name="email" placeholder="Email" required><br><br>
+                <input class="input pl-5" type="email" name="email" placeholder="Email" required><br><br>
                 <input class="input pl-5" type="password" name="password" placeholder="Password" required><br><br>
                 <input class="input pl-5" type="password" name="confirmpassword" placeholder="Confirm password" required><br><br>
                 <input type="submit" name="submit" value="Create account" class="font-bold bg-black text-white w-48 py-2 my-3 text-center rounded-3xl cursor-pointer hover:bg-white hover:text-black shadow-lg transition ease-in"><br><br>

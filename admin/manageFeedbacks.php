@@ -17,7 +17,7 @@ if (isset($_GET['delete'])) {
     <?php include('partials/sideBar.php'); ?>
 
 
-    <div class="w-full overflow-x-auto relative shadow-md sm:rounded-lg">
+    <div class="w-full overflow-x-auto relative ml-5 mr-5 sm:rounded-lg">
         <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl">FEEDBACKS</h1>
 
         <?php

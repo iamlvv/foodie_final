@@ -66,7 +66,7 @@
         <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl px-5">PRODUCTS
             <button data-modal-toggle="addProductModal" value="" type=" button" class="addProduct float-right text-white bg-slate-700 hover:bg-slate-800 focus:outline-none font-medium rounded-lg text-sm px-8 py-2.5 text-center ">ADD PRODUCT</button>
         </h1>
-        <div class="wrapper grid grid-cols-4 gap-4">
+        <div class="wrapper grid grid-cols-4 gap-4 mb-10 ml-5 mr-5 mt-5">
 
             <?php
             //Create a SQL Query to Get all the Food
@@ -95,11 +95,11 @@
 
             ?>
                    <div class="">
-                        <div class="grid  bg-orange-100 text-center rounded-lg shadow-md m-5 overflow-hidden ">
-                            <img src="<?= $product_image; ?>" class=" h-20 my-5 mx-auto" alt="order icon">
+                        <div class="flex flex-col  bg-orange-100 text-center rounded-lg shadow-md overflow-hidden h-64 relative">
+                            <img src="<?= $product_image; ?>" class=" mx-auto w-1/2" alt="order icon">
                             <h1 class="px-2"><?= $name; ?></h1>
-                            <p class="mb-2"><?= $price; ?></p>
-                            <button value="<?php echo $id; ?>" class="productInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500" type="button" name="view_detail" data-id="">
+                            <p class="mb-2"><?= $price; ?> VND</p>
+                            <button value="<?php echo $id; ?>" class="productInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all bottom-0 absolute duration-500 px-6 w-full " type="button" name="view_detail" data-id="">
                                 Details
                             </button>
                         </div>

@@ -19,7 +19,7 @@ if (isset($_GET['delete'])) {
     <?php include('partials/sideBar.php'); ?>
 
 
-    <div class="w-full overflow-x-auto relative shadow-md sm:rounded-lg">
+    <div class="w-full overflow-x-auto relative ml-5 mr-5 sm:rounded-lg">
         <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">ORDERS</h1>
 
         <?php
@@ -34,7 +34,7 @@ if (isset($_GET['delete'])) {
             //we have orders in DB
             //Get the orders from DB and Display
         ?>
-            <table class="w-full text-sm  text-gray-500 text-center">
+            <table class="w-full text-sm text-gray-500 text-center">
                 <thead class="text-xs text-black font-bold uppercase border-b border-gray-800 ">
                     <tr>
                         <th scope="col" class="py-3 px-6 bg-slate-300 ">

@@ -8,7 +8,7 @@ if (!isset($_COOKIE['user_id'])) {
 
     <div class="flex-1">
         <h1 class="text-center my-5 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl ">USERS</h1>
-        <div class="wrapper grid grid-cols-4 gap-4">
+        <div class="wrapper grid grid-cols-4 gap-4 mb-10 ml-5 mr-5 mt-5">
 
             <?php
             //Create a SQL Query to Get all the user
@@ -37,11 +37,11 @@ if (!isset($_COOKIE['user_id'])) {
 
             ?>
                     <div class="">
-                        <div class=" bg-orange-100 grid flex-col  rounded-lg shadow-md m-5 overflow-hidden ">
-                            <img src="<?= $user_image; ?>" class=" h-20 m-6" alt="order icon">
+                        <div class=" bg-orange-100 flex flex-col  rounded-lg shadow-md m-5 overflow-hidden h-64 relative">
+                            <img src="<?= $user_image; ?>" class=" mx-auto w-1/2" alt="order icon">
                             <h1 class="px-2 pb-5"><?= $user_fullName; ?></h1>
 
-                            <button value="<?php echo $id; ?>" class="userInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500" type="button" name="view_detail" data-id="">
+                            <button value="<?php echo $id; ?>" class="userInfo bg-blue-500 text-white p-3 hover:bg-blue-800 transition-all duration-500 bottom-0 absolute w-full" type="button" name="view_detail" data-id="">
                                 Details
                             </button>
                         </div>

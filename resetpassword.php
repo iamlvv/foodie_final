@@ -96,14 +96,20 @@
     </head>
     <body>
         <div class="resetpassword">
-            <h1 class="h1 text-center"><b>RESET YOUR PASSWORD</b></h1><br>
+            <h1 class="font-bold mb-5 text-center text-2xl">RESET YOUR PASSWORD</h1>
             <p class="text-center text-muted">Enter your email</p>
             <br><br>
             <form action="" method="POST" class="text-center">
-                <input class="input" type="text" name="email" placeholder="&emsp;Email"><br><br>
-                <input class="input" type="text" name="newpassword" placeholder="&emsp;New password"><br><br>
-                <input class="input" type="text" name="confirmnewpassword" placeholder="&emsp;Confirm new password"><br><br>
-                <input type="submit" name="submit" value="Reset password" class="font-bold bg-black text-white w-48 py-2 my-3 text-center rounded-pill"><br><br>
+                <div class="mb-5">
+                <input class="input pl-5" type="text" name="email" placeholder="Email" required>
+                </div>
+                <div class="mb-5">
+                <input class="input pl-5" type="text" name="newpassword" placeholder="New password" required>
+                </div>
+                <div class="mb-5">
+                <input class="input pl-5" type="text" name="confirmnewpassword" placeholder="Confirm new password" required>
+                </div>
+                <input type="submit" name="submit" value="Reset password" class="font-bold bg-black text-white w-48 py-2 my-3 text-center hover:bg-white hover:text-black rounded-3xl transition ease-in cursor-pointer"><br><br>
             </form>
             <p class="text-center">Don't have account?&emsp;&emsp;<a href="./signup.php"><b><span style="color: rgb(95, 113, 166)">Sign up</span></b></a></p>
         </div>

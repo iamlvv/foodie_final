@@ -134,7 +134,7 @@
             <br><br>
             <form action="" method="POST" class="text-center">
                 <div>
-                    <input class="input pl-5" type="text" name="email" placeholder="Email" required>
+                    <input class="input pl-5" type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="mt-5 mb-5">
                     <input class="input pl-5" type="password" name="password" placeholder="Password" required>
